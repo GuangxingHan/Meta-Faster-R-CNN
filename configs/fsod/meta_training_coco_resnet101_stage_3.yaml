@@ -1,0 +1,41 @@
+_BASE_: "Base-FSOD-C4.yaml"
+MODEL:
+  WEIGHTS: "./output/fsod/meta_training_coco_resnet101_stage_2/model_final.pth"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  BACKBONE:
+    FREEZE_AT: 2
+  ROI_HEADS:
+    SCORE_THRESH_TEST: 0.0
+  ROI_BOX_HEAD:
+    GAMMA_NUM: 2
+  RPN:
+    PRE_NMS_TOPK_TEST: 12000
+    POST_NMS_TOPK_TEST: 100
+  FEWX_BASELINE: False
+  WITH_ALIGNMENT: True
+OUTPUT_DIR: './output/fsod/meta_training_coco_resnet101_stage_3'
+DATASETS:
+  TRAIN: ("coco_2014_train_nonvoc",) 
+  TEST: ("coco_2014_val",)
+  TEST_SHOTS: (1,2,3,5,10,30)
+INPUT:
+  FS:
+    SUPPORT_WAY: 2
+    SUPPORT_SHOT: 30
+  MIN_SIZE_TRAIN: (640, 672, 704, 736, 768, 800)
+  MAX_SIZE_TRAIN: 1333
+  MIN_SIZE_TEST: 600
+  MAX_SIZE_TEST: 1000
+SOLVER:
+  IMS_PER_BATCH: 8
+  BASE_LR: 0.001
+  STEPS: (15000, 20000)
+  MAX_ITER: 20000
+  WARMUP_ITERS: 500
+  WARMUP_FACTOR: 0.1
+  CHECKPOINT_PERIOD: 20000
+  HEAD_LR_FACTOR: 2.0
+TEST:
+  EVAL_PERIOD: 20000

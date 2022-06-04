@@ -1,0 +1,40 @@
+_BASE_: "Base-FSOD-C4.yaml"
+MODEL:
+  WEIGHTS: "./output/fsod/meta_training_pascalvoc_split1_resnet101_stage_3/model_final.pth"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  BACKBONE:
+    FREEZE_AT: 5
+  ROI_HEADS:
+    SCORE_THRESH_TEST: 0.0
+  ROI_BOX_HEAD:
+    GAMMA_NUM: 0
+  RPN:
+    PRE_NMS_TOPK_TEST: 12000
+    POST_NMS_TOPK_TEST: 100
+  FEWX_BASELINE: False
+  WITH_ALIGNMENT: True
+DATASETS:
+  TRAIN: ("voc_2007_trainval_all1_1shot",)
+  TEST: ("voc_2007_test_all1",)
+  TEST_KEEPCLASSES: 'all1'
+SOLVER:
+  IMS_PER_BATCH: 8
+  BASE_LR: 0.0001
+  STEPS: (2000, 3000)
+  MAX_ITER: 3000
+  WARMUP_ITERS: 200
+  CHECKPOINT_PERIOD: 3000
+INPUT:
+  FS:
+    FEW_SHOT: True
+    SUPPORT_WAY: 5
+    SUPPORT_SHOT: 1
+  MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800)
+  MAX_SIZE_TRAIN: 1333
+  MIN_SIZE_TEST: 600
+  MAX_SIZE_TEST: 1000
+OUTPUT_DIR: './output/fsod/finetune_dir/1shot_finetune_pascalvoc_split1_resnet101'
+TEST:
+  EVAL_PERIOD: 3000
