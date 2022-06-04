@@ -63,7 +63,7 @@ sh scripts/faster_rcnn_with_fpn_pascalvoc_split3_base_classes_branch.sh
 sh scripts/few_shot_finetune_pascalvoc_split3_resnet101.sh
 ```
 
-## Citing QA-FewDet
+## Citing Meta-Faster-R-CNN
 If you use this work in your research or wish to refer to the baseline results published here, please use the following BibTeX entries:
 ```
 @inproceedings{han2021meta,
