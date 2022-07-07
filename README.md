@@ -66,10 +66,13 @@ sh scripts/few_shot_finetune_pascalvoc_split3_resnet101.sh
 ## Citing Meta-Faster-R-CNN
 If you use this work in your research or wish to refer to the baseline results published here, please use the following BibTeX entries:
 ```
-@inproceedings{han2021meta,
-  title={Meta Faster R-CNN: Towards Accurate Few-Shot Object Detection with Attentive Feature Alignment},
+@inproceedings{han2022meta,
+  title={Meta faster r-cnn: Towards accurate few-shot object detection with attentive feature alignment},
   author={Han, Guangxing and Huang, Shiyuan and Ma, Jiawei and He, Yicheng and Chang, Shih-Fu},
-  booktitle={Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI)},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={36},
+  number={1},
+  pages={780--789},
   year={2022}
 }
 @inproceedings{fan2020few,
@@ -79,12 +82,12 @@ If you use this work in your research or wish to refer to the baseline results p
   pages={4013--4022},
   year={2020}
 }
-@article{wang2020few,
-    title={Frustratingly Simple Few-Shot Object Detection},
-    author={Wang, Xin and Huang, Thomas E. and  Darrell, Trevor and Gonzalez, Joseph E and Yu, Fisher}
-    booktitle = {International Conference on Machine Learning (ICML)},
-    month = {July},
-    year = {2020}
+@inproceedings{wang2020frustratingly,
+  title={Frustratingly simple few-shot object detection},
+  author={Wang, Xin and Huang, Thomas E and Darrell, Trevor and Gonzalez, Joseph E and Yu, Fisher},
+  booktitle={Proceedings of the 37th International Conference on Machine Learning},
+  pages={9919--9928},
+  year={2020}
 }
 ```
 
