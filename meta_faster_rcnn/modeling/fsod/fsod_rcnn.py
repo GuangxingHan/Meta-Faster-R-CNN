@@ -209,6 +209,8 @@ class FsodRCNN(nn.Module):
             # negative support branch ##################################
             neg_end = pos_end
             for way in range(self.support_way-1):
+                if neg_end >= pos_begin + len(batched_inputs[i]['support_cls']):
+                    break
                 neg_begin = neg_end
                 begin_rel = neg_begin - pos_begin
                 for idx in range(begin_rel+1, len(batched_inputs[i]['support_cls'])):
