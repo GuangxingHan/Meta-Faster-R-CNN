@@ -187,7 +187,7 @@ def crop_support(img, bbox):
 def main(root_path, year, split, keepclasses, sid, shot):
     dirname = "VOC{}".format(year)
 
-    classnames_all = PASCAL_VOC_ALL_CATEGORIES[sid]
+    # classnames_all = PASCAL_VOC_ALL_CATEGORIES[sid]
     if keepclasses == 'all':
         classnames = PASCAL_VOC_ALL_CATEGORIES[sid]
     elif keepclasses == 'base':
@@ -257,7 +257,7 @@ def main(root_path, year, split, keepclasses, sid, shot):
                 cv2.imwrite(file_path, support_img)
                 #print(file_path)
                 support_dict['support_box'].append(support_box.tolist())
-                support_dict['category_id'].append(classnames_all.index(cls_))
+                support_dict['category_id'].append(classnames.index(cls_)) #(classnames_all.index(cls_))
                 support_dict['image_id'].append(fileid)
                 support_dict['id'].append(box_id)
                 support_dict['file_path'].append(file_path)
@@ -278,7 +278,7 @@ if __name__ == '__main__':
 
 
     for year in [2007, 2012]:
-        for keepclasses in ['all', 'novel']:
+        for keepclasses in ['all',] #'novel']:
             for sid in [1,2,3]:
                 for shot in [1,2,3,5,10]:
                     print("*******************keepclasses={}, sid={}, shot={}".format(keepclasses, sid, shot))
