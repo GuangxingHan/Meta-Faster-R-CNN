@@ -278,7 +278,7 @@ if __name__ == '__main__':
 
 
     for year in [2007, 2012]:
-        for keepclasses in ['all',] #'novel']:
+        for keepclasses in ['all',]: #'novel']:
             for sid in [1,2,3]:
                 for shot in [1,2,3,5,10]:
                     print("*******************keepclasses={}, sid={}, shot={}".format(keepclasses, sid, shot))
