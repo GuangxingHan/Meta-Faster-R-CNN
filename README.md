@@ -14,6 +14,8 @@ This repo contains the official PyTorch implementation for the AAAI 2022 Oral pa
 
 Our codebase is built upon [detectron2](https://github.com/facebookresearch/detectron2). You only need to install [detectron2](https://github.com/facebookresearch/detectron2/blob/main/INSTALL.md) following their instructions.
 
+Please note that we used detectron 0.2.1 in this project. Higher versions of detectron might report errors.
+
 ## Data Preparation
 
 - We evaluate our model on two FSOD benchmarks PASCAL VOC and MSCOCO following the previous work [TFA](https://github.com/ucbdrive/few-shot-object-detection).
