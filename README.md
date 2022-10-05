@@ -65,6 +65,10 @@ sh scripts/faster_rcnn_with_fpn_pascalvoc_split3_base_classes_branch.sh
 sh scripts/few_shot_finetune_pascalvoc_split3_resnet101.sh
 ```
 
+## Pre-trained models 
+
+We provided the meta-trained models over base classes for both MSCOCO dataset and the 3 splits on VOC dataset. The model links are [here](https://drive.google.com/drive/u/0/folders/11ODEuV1iaKRZp_XQgEfnuwmIK00FIv1S).
+
 ## Citing Meta-Faster-R-CNN
 If you use this work in your research or wish to refer to the baseline results published here, please use the following BibTeX entries:
 ```
