@@ -67,7 +67,7 @@ sh scripts/few_shot_finetune_pascalvoc_split3_resnet101.sh
 
 ## Model Zoo 
 
-We provided the meta-trained models over base classes for both MSCOCO dataset and the 3 splits on VOC dataset. The model links are [here](https://drive.google.com/drive/u/0/folders/11ODEuV1iaKRZp_XQgEfnuwmIK00FIv1S).
+We provided the meta-trained models over base classes for both MSCOCO dataset and the 3 splits on VOC dataset. The model links are [Google Drive](https://drive.google.com/drive/u/0/folders/11ODEuV1iaKRZp_XQgEfnuwmIK00FIv1S) and [Tencent Weiyun](https://share.weiyun.com/PeBdgBLY).
 
 ## Citing Meta-Faster-R-CNN
 If you use this work in your research or wish to refer to the baseline results published here, please use the following BibTeX entries:
